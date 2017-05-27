@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script type="text/javascript">
+        var yMoney = Number(prompt('your money = '));
+        var dMoney = 100000;
+        var mydice = 0;
+        var dealerdice = 0;
+        var enough = "false";
+        var exit1 = false;
+        var cont=false;
+
+        function rolldice() {
+            return Math.floor(Math.random() * 6) + 1;
+        }
+
+        function exit(string){
+            if(string=="true"||string=="true"||string=="true"){
+				return true;
+            }else{
+                return false;
+            }
+       	}
+
+		// do {
+            mydice = rolldice();
+            dealerdice = rolldice();
+            console.log(mydice);
+            console.log(dealerdice);
+            // do {
+                var temp = Number(prompt('your call = '));
+                // if (yMoney > temp) {
+                //     enough = "true"
+                // }while(enough=="false")
+                    if (mydice > dealerdice) {
+                        yMoney = yMoney + temp;
+                        dMoney = dMoney - temp;
+                    } else {
+                        yMoney = yMoney - temp;
+                        dMoney = dMoney + temp;
+                    }
+            //     exit1 = prompt('exit ? ');
+            //     cont = exit(exit1);
+            // } while (yMoney > 1 || dMoney > 100 || cont===false)
+            document.write('your money ='+yMoney);
+            document.write('dealer money ='+dMoney);
+          
+    </script>
+</body>
+
+</html>
